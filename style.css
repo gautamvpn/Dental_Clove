@@ -1,0 +1,1910 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fef1e9;
+  }
+
+.navbar-section {
+    padding: 20px 0;
+    background-color: #fef1e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: baseline;
+    margin-left: 44px;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+/* Right Side (Book Appointment & Help Button) */
+.nav-right {
+    position: relative;
+    margin-right: 45px;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Book Appointment Button */
+.appointment-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #f8943f;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%; /* Make button full width on mobile */
+}
+
+.appointment-btn img {
+    width: 24px;
+}
+
+/* Form Container: Positioned Absolutely Relative to the nav-right */
+.form-container {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position below the Book Appointment button */
+    right: 100%; /* Align to the right */
+    margin-top: 10px; /* Optional spacing between button and form */
+    background-color: white;
+    padding: 20px;
+    width: 500px; /* Set a width for the form */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #feb47b;
+  }
+
+  /* grid container */
+  /* Grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 16px; /* Gap of 16px (equivalent to Tailwind's gap-4) */
+    margin-bottom: 20px;
+}
+
+/* Grid item styling */
+.grid-item {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Label styling */
+.label {
+    display: block;
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-bottom: 8px; /* Equivalent to mb-2 */
+}
+
+/* Input field styling */
+.input-field {
+    width: 100%;
+    border: 1px solid #d1d5db; /* Equivalent to border-gray-300 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    padding: 8px; /* Equivalent to p-2 */
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #6b7280; /* Equivalent to ring-gray-500 */
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.5); /* Equivalent to focus:ring-2 */
+}
+
+
+/* Help Button */
+.help {
+    margin-right: 2px;
+    width: 100%; /* Make help button full width on mobile */
+}
+
+.help-btn {
+    display: flex;
+    border: 1px solid #ff8a35;
+    border-radius: 50px;
+    padding: 16px 20px;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(20, 20, 20);
+    cursor: pointer;
+    width: 100%; /* Full width on mobile */
+}
+
+.help-btn img {
+    margin: 0 8px;
+    width: 14px;
+}
+
+
+/* nav-center */
+  /* Navigation Links */
+/* Main Navbar Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-weight: 500;
+}
+
+.li-btn{
+    background-color: #f8943f;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer; 
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the "Treatments" li */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 10;
+    width: 800px; /* Adjust width as needed */
+    grid-template-columns: repeat(3, 1fr); /* Grid layout for dropdown */
+    gap: 10px;
+}
+
+/* Make dropdown a grid */
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Show the dropdown on click */
+.dropdown:hover .dropdown-menu {
+    display: grid;
+}
+
+
+.navbar-right ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #b33939;
+}
+
+/* Mobile Dropdown Toggle Button */
+.dropdown-toggle {
+    display: none;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Mobile Dropdown Menu */
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    width: 200px;
+    background-color: #2d3436;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+#dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile Dropdown Inner Menu */
+.mobile-dropdown-menu {
+    display: none;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+    gap: 10px;
+}
+
+.mobile-dropdown-menu li {
+    list-style: none;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #e2c1c1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-dropdown-menu a:hover {
+    background-color: #e8dfdf;
+}
+
+/* Show the mobile dropdown menu on click */
+.mobile-dropdown.active .mobile-dropdown-menu {
+    display: grid; /* Show as grid */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns logo and hamburger button vertically */
+    }
+
+    .form-container{
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%; /* Position below the Book Appointment button */
+        right: 0; /* Align to the right */
+        margin-top: 10px; /* Optional spacing between button and form */
+        background-color: white;
+        padding: 20px;
+        width: 300px; /* Set a width for the form */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+    .navbar-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links,
+    .nav-right {
+        display: none;
+    }
+
+    .dropdown-toggle {
+        display: block;
+    }
+
+    .logo {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .logo img{
+        width: 8rem;
+    }
+
+    /* Display Book Appointment and Help buttons in full width */
+    .nav-right {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .appointment-btn,
+    .help {
+        flex: 1; /* Each takes half the width */
+        margin-right: 10px; /* Small gap between the two */
+    }
+
+    .help {
+        margin-right: 0;
+    }
+
+    #dropdown-menu {
+        position: static;
+        width: 100%;
+        top: auto;
+        background-color: #fef1e9;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    #dropdown-menu ul {
+        padding: 0;
+    }
+
+    #dropdown-menu li a {
+        color: #3a3836;
+        padding: 15px 0;
+    }
+}
+
+/* Further media query for even smaller devices */
+@media (max-width: 480px) {
+    .appointment-btn,
+    .help-btn {
+        padding: 10px 12px; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Decrease font size */
+    }
+
+    .appointment-btn img
+     {
+        width: 18px; /* Reduce image size */
+    }
+    .help-btn img{
+        width: 12px;
+    }
+
+    .logo img{
+        width: 6rem;
+    }
+
+}
+
+
+
+
+
+
+/* Slider container */
+.slider {
+    display: flex;
+    background: #b5c1a6;
+    height: 80vh;
+}
+
+/* Slide container */
+.slide1 {
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+/* Left section */
+.left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Heading 1 styling */
+.left h1 {
+    color: #303030;
+    font-size: 3.6rem;
+    font-weight: 800;
+}
+
+/* Heading 3 styling */
+.left h3 {
+    font-weight: 500;
+    color: #525252;
+    font-size: 2.5rem;
+}
+
+/* Heading 2 styling */
+.left h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #303030;
+}
+
+/* Button styling */
+.left button {
+    color: white;
+    padding: 20px 100px;
+    background-color: #f8943f;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Right section */
+.right {
+    display: flex;
+    width: 30%;
+}
+
+/* Image inside right section */
+.right img {
+    padding-top: 78px;
+}
+
+
+
+
+
+
+
+
+
+/* Clinic Section */
+.clinic-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 100px;
+    background-color: #fff;
+  }
+  
+  /* Left Section Heading */
+  .clinic-left h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .clinic-left span {
+    color: #f89540;
+  }
+  
+  /* Left Section Paragraph */
+  .clinic-left p {
+    font-size: 1.2rem;
+    color: #3b3937;
+    margin-top: 12px;
+  }
+  
+  /* Right Section (Ratings) */
+  .clinic-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .google-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .google-rating img {
+    width: 80px;
+    margin-right: 18px;
+  }
+  
+  /* Rating Header */
+  .rating h2 {
+    font-size: 1.8rem;
+    color: #f89540;
+  }
+  
+  /* Rating Description */
+  .rating p {
+    font-size: 1.1rem;
+    color: #3b3937;
+  }
+  
+  /* City Dropdown Container */
+  .city-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Dropdown Styling */
+  .city-dropdown select {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: 2px solid #a1a1a1;
+    background-color: #fff;
+    color: #a1a1a1;
+    cursor: pointer;
+  }
+  
+  /* Button Styling */
+  .city-dropdown button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: #f89540;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  /* Dropdown Focus State */
+  .city-dropdown select:focus {
+    outline: none;
+    border-color: #a1a1a1;
+  }
+  
+
+  /* Treatment Section */
+.treatment-section {
+    width: 100vw;
+    background-color: #fef8f4;
+    padding: 50px 0;
+  }
+  
+  /* Container for Centering Content */
+  .container {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Heading Styles */
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3b3937;
+    margin-bottom: 12px;
+  }
+  
+  /* Grid Layout for Treatments */
+  .treatment-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Individual Treatment Card */
+  .treatment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Treatment Card Image */
+  .treatment-card img {
+    margin-bottom: 15px;
+  }
+  
+  /* Treatment Card Text */
+  .treatment-card p {
+    font-size: 1rem;
+    color: #3b3937;
+    font-weight: bold;
+  }
+  
+  /* Explore Link Styles */
+  .explore-link {
+    display: inline-flex;
+    background-color: transparent;
+    color: #141313;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .explore-link span {
+    text-decoration: underline;
+  }
+  
+  .explore-link i {
+    font-size: 1.2rem;
+    color: #f89540;
+  }
+
+  
+  /* Guidance Section */
+.guidance-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+  }
+  
+  /* Container for Guidance Section */
+  .g-container {
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: stretch;
+  }
+  
+  /* Guidance Form Styles */
+  .guidance-form {
+    background-color: #fdf2f0;
+    padding: 30px;
+    gap: 45px;
+    border-radius: 12px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .guidance-form h2 {
+    font-size: 1.6rem;
+    color: #3b3a39;
+    margin-bottom: 12px;
+  }
+  
+  .guidance-form p {
+    font-size: 1rem;
+    color: #7a7a78;
+    margin-bottom: 18px;
+  }
+  
+  .guidance-form input,
+  .guidance-form select {
+    width: 100%;
+    padding: 15px 24px;
+    margin-bottom: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+  
+  .guidance-form button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #f8852a;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  /* Guidance Info Styles */
+  .guidance-info {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 12px;
+    height: 100%;
+  }
+  
+  /* Safety Protocols Section */
+  .safety-protocols {
+    height: 70%;
+    background-color: #f4f2fc;
+    padding: 30px 0 0 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .s-left {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .s-right img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Safety Protocols Heading */
+  .safety-protocols h3 {
+    font-size: 1.5rem;
+    color: #3b3a39;
+  }
+  
+  /* Safety Protocols Paragraph */
+  .safety-protocols p {
+    font-size: 0.9rem;
+    color: #7a7a78;
+  }
+  
+  .safety-protocols a {
+    display: inline-block;
+    color: #f8852a;
+    font-size: 0.9rem;
+    padding: 20px 0;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  /* Neighbourhood Info Section */
+  .neighbourhood-info {
+    display: flex;
+    height: 30%;
+    gap: 20px;
+  }
+  
+  /* Info Card Styles */
+  .info-card {
+    background-color: #e2c7ff;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  }
+  
+  .info-card img {
+    max-width: 50px;
+    margin-bottom: 12px;
+    margin: 0 auto;
+  }
+  
+  .info-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3b3a39;
+  }
+  
+  .info-card span {
+    font-size: 0.9rem;
+    color: #7a7a78;
+  }
+  
+  .info-card a {
+    display: inline-block;
+    color: #575757;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+/* Testimonial Section */
+.testimonial-section {
+    overflow-x: hidden;
+    z-index: 1;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  /* Heading in Testimonial Section */
+  .testimonial-section h2 {
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+    color: #2c2c2c;
+  }
+  
+  /* Swiper Container */
+  .swiper-container {
+    width: 90%; /* Adjust width as needed */
+    height: 500px; /* Adjust height to suit the design */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Swiper Wrapper */
+  .swiper-wrapper {
+    display: flex; /* Ensure slides are arranged horizontally */
+  }
+  
+  /* Swiper Slide */
+.swiper-slide {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    width: 30%; /* Adjust to show multiple slides at once */
+  }
+  
+ /* Image inside Swiper Slide */
+.swiper-slide img {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure images take full width of the slide */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 430px; /* Make images shorter */
+    object-fit: cover; /* Ensure image covers the space */
+    object-position: center top; /* Adjust the positioning to fit better */
+  }
+
+
+  /* Text inside Swiper Slide */
+  .swiper-slide p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin: 0;
+  }
+  
+  /* Span inside Swiper Slide */
+  .swiper-slide span {
+    font-size: 1.1rem;
+    color: #f89a2d;
+  }
+  
+
+  /* Doctor excellence section */
+  /* Dental Excellence Section */
+.dental-excellence-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0; /* Reduced padding */
+    background-color: #f9f9f9; /* Lighter background for contrast */
+  }
+  
+  /* Dental Info Section */
+  .dental-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Reduced gap */
+    padding-left: 4rem; /* Reduced padding */
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 45%; /* Adjusted width */
+  }
+  
+  /* Side Image with Text */
+  .side-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligned to the left */
+    gap: 15px; /* Reduced gap */
+  }
+  
+  /* Image Sizing */
+  .side-img img {
+    width: 100px; /* Larger image */
+    height: 80px; /* Adjusted height */
+    object-fit: cover; /* Fill the container */
+  }
+  
+  /* Heading with Highlighted Span */
+  .side-img h3 span {
+    color: #f58220; /* Slightly changed color */
+  }
+  
+  /* Main Heading */
+  .dental-info h2 {
+    line-height: 1.5;
+    font-size: 2.2rem; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 15px; /* Reduced margin */
+    color: #2e2e2e; /* Darker text color */
+  }
+  
+  /* Doctor Slider Section */
+  .doctor-slider-container {
+    width: 50%; /* Adjusted width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Slider Wrapper */
+  .doctor-slider-wrapper {
+    display: flex;
+    gap: 20px; /* Added gap between slides */
+  }
+  
+  /* Individual Slide */
+  .doctor-slider-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px; /* Slightly increased border-radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Added box-shadow */
+    padding: 25px; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .doctor-slider-slide:hover {
+    transform: translateY(-5px); /* Added hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image in Slide */
+  .doctor-slider-slide img {
+    width: 90%; /* Reduced width */
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px; /* Increased margin */
+  }
+  
+  /* Doctor's Name */
+  .doctor-slider-slide h3 {
+    font-size: 1.6rem; /* Increased font size */
+    color: #2e2e2e; /* Darker text color */
+    margin: 5px 0 0 0;
+  }
+  
+  /* Doctor's Description */
+  .doctor-slider-slide p {
+    font-size: 1.15rem; /* Slightly larger */
+    color: #6d6d6d; /* Softer color */
+    margin: 8px 0 0 0; /* Adjusted margins */
+  }
+  
+  /* Meet Doctors Button */
+  .meet-doctors-btn {
+    background-color: #f58220; /* Updated color */
+    color: #ffffff;
+    border: none;
+    padding: 16px 4rem; /* Adjusted padding */
+    border-radius: 50px;
+    font-size: 16px; /* Increased font size */
+    width: auto; /* Fit-content */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Meet Doctors Button Hover */
+  .meet-doctors-btn:hover {
+    background-color: #d66920; /* Darker hover effect */
+  }
+  
+
+  /* Scrollable Stats Section  */
+/* Scroll Container */
+.scroll-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    background-color: #f5e3d5; /* Slightly softened background */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start */
+    padding: 20px 0; /* Added vertical padding */
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  /* Scroll Content */
+  .scroll-content {
+    display: flex;
+    gap: 30px; /* Added gap between items for better spacing */
+  }
+  
+  /* Individual Scroll Items */
+  .item {
+    padding: 15px 25px; /* Reduced padding for a more compact look */
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #713623; /* Softer text color */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Ensure content doesn't break lines */
+    background-color: #ffffff; /* Added background for each item */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+  
+  /* Image Inside Item */
+  .item img {
+    margin-right: 15px; /* Increased space between image and text */
+    width: 40px; /* Consistent image size */
+    height: 40px; /* Ensures square aspect ratio */
+    object-fit: cover; /* Ensures images fit without distortion */
+  }
+  
+
+  /* Main Slider Section  */
+  .main-slider-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .main-slider-wrapper::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari */
+  }
+  
+  .main-slide2 {
+    padding: 50px 20px;
+    width: 100%;
+  }
+  
+  .main-slide2 img {
+    width: 50vw;
+    max-width: 100%;
+  }
+  
+
+  /* Blog Section */
+  .blog {
+    margin-top: 60px;
+    padding: 50px 100px;
+    background-color: #fef8f2;
+  }
+  
+  .blog-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .blog-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .blog-wrapper ul {
+    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows better layout on smaller screens */
+  }
+  
+  .blog-wrapper ul li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    list-style: none;
+    padding-right: 10px;
+    color: #555;
+    position: relative;
+  }
+  
+  .blog-wrapper ul li::after {
+    content: '';
+    height: 20px;
+    width: 1px;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+  }
+  
+  .blog-wrapper ul li:last-child::after {
+    display: none;
+  }
+  
+  .blog-wrapper ul .active {
+    color: #d77929;
+  }
+  
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .blog-container {
+    display: flex;
+    gap: 20px;
+    text-align: start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for modern look */
+  }
+  
+  .blog-img img {
+    width: 120px;
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  .blog-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+  
+  .blog-text h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .blog-link a {
+    color: #4d2c19;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .blog-link i {
+    color: #d77929;
+    padding-left: 5px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .blog-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+  
+    .blog-container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog {
+      padding: 30px 20px;
+    }
+  
+    .blog-list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .blog-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .blog-img img {
+      width: 100px;
+      margin: 0 auto 10px;
+    }
+  
+    .blog-text h3 {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-text h3 {
+      font-size: 16px;
+    }
+  
+    .blog-wrapper ul li {
+      font-size: 14px;
+    }
+  }
+
+  /* Trust Section  */
+  .trust {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0; /* Reduced padding for more balance */
+    background-color: #f9f9f9; /* Subtle background color */
+  }
+  
+  .trust-wrapper {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trust-top img {
+    width: 100%;
+    max-width: 900px; /* Limited the max width for larger screens */
+    border-radius: 15px; /* Added slight rounding for modern touch */
+  }
+  
+  .trust-bottom {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    background-color: white;
+    margin-top: -100px; /* Adjusted overlap */
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Increased gap for better spacing */
+    padding: 40px 60px; /* Adjusted padding for better layout */
+    border-radius: 25px; /* Increased radius for smoother corners */
+    text-align: left; /* Standardized text alignment */
+  }
+  
+  .stats {
+    width: 100%;
+  }
+  
+  .trust-bottom h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.5rem; /* Slightly reduced size for better readability */
+    font-weight: 700;
+    color: #d77929;
+    margin-bottom: 10px;
+  }
+  
+  .trust-bottom h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .trust-bottom .stats p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  .brand-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for logos */
+    justify-content: center; /* Centers the logos */
+    gap: 20px; /* Uniform gap between logos */
+    margin-top: 20px;
+  }
+  
+  .brand-logos img {
+    margin: 10px;
+    object-fit: contain;
+    width: 110px;
+    height: 90px; /* Adjusted height for more consistency */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .brand-logos img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  button {
+    padding: 12px 25px;
+    border-radius: 50px;
+    background-color: #f8943f;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d77929; /* Darker on hover */
+  }
+  
+  .link {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100%;
+  }
+  
+  .link a {
+    color: #4d2c19;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }
+  
+  .link i {
+    color: #d77929;
+    margin-left: 5px;
+  }
+  
+  
+  /* Success Section */
+  
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .success-wrapper {
+    padding: 100px 125px;
+    background-color: #fff9f4;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .text-area {
+      text-align: center;
+  
+      h2 {
+        font-size: 3rem;
+        color: #303030;
+      }
+      h3 {
+        color: #474747;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .success-info {
+    margin-top: 50px;
+    gap: 20px;
+    display: flex;
+  }
+  .success-area {
+    padding: 20px 0px;
+    gap: 24px;
+    align-items: center;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .question {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4; /* Light background for better contrast */
+    padding: 60px 0; /* Reduced padding for better balance */
+  }
+  
+  .question-wrapper {
+    width: 85%;
+    padding: 60px; /* Adjusted padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Adjusted gap for spacing */
+  }
+  
+  .heading h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem; /* Adjusted font size for better readability */
+    font-weight: 700;
+    color: #333; /* Darker text color for better contrast */
+    text-align: center; /* Centered text for better alignment */
+  }
+  
+  .question-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Increased gap for better spacing */
+  }
+  
+  .question-container {
+    padding: 20px;
+    background-color: white; /* Added background color for better visibility */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .plus-icon {
+    font-size: 2.5rem; /* Adjusted size for better scaling */
+    color: #f8943f; /* Maintained color for consistency */
+  }
+  
+  .question-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem; /* Adjusted font size for readability */
+    font-weight: 600;
+    color: #333; /* Darker text color for consistency */
+    margin: 0; /* Removed default margin for better alignment */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .question-wrapper {
+      padding: 40px 20px;
+      gap: 40px;
+    }
+  
+    .heading h1 {
+      font-size: 2.5rem;
+    }
+  
+    .question-list {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
+  
+/* FOOTER */
+footer {
+    background: #3d2010;
+    color: #ffefe2;
+    padding: 40px 20px; /* Adjusted padding for better spacing */
+    text-align: center;
+}
+
+/* Footer Wrapper */
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between sections */
+}
+
+/* Top Section */
+.top {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 20px; /* Space between items */
+    align-items: center; /* Center-align items */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #ffefe2;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+/* Footer Links */
+.top h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* List Items */
+.top ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top li {
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Middle Section */
+.middle {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.middle img {
+    width: 100%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Low Section */
+.low {
+    color: #9f9f9f;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center; /* Center-aligned text */
+    padding: 20px 0; /* Added padding for spacing */
+}
+
+
+  /* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .blog-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  
+    .blog-wrapper ul {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog {
+      padding: 40px 20px;
+    }
+  
+    .blog-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .blog-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .blog-container .blog-img img {
+      margin: 0 auto;
+      width: 80px;
+    }
+  
+    .blog-wrapper ul {
+      display: block;
+      text-align: center;
+    }
+  
+    .blog-wrapper ul li {
+      display: inline-block;
+      padding-right: 10px;
+      border-right: none;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-text h3 {
+      font-size: 16px;
+    }
+  
+    .blog-wrapper ul li {
+      font-size: 14px;
+    }
+  }
+  
+  .main-slider-wrapper {
+    display: flex;
+    overflow-y: scroll;
+    width: 100%;
+  }
+  .main-slider-wrapper .main-slide2 {
+    padding: 50px 20px;
+    width: 100%;
+  
+    img {
+      width: 50vw;
+      /* width: 100%; */
+    }
+  }
+  .main-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9e6da; /* Match the background from your image */
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .scroll-content {
+    display: flex;
+    width: max-content; /* Ensure content only takes as much space as needed */
+    animation: scroll 20s linear infinite; /* Adjust duration for speed */
+  }
+  
+  .item {
+    padding: 20px 30px;
+    padding-inline-start: 5px; /* Adjust spacing between items */
+    font-size: 18px; /* Font size */
+    color: #6e2b11; /* Text color */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevents line breaks */
+    img {
+      padding-right: 10px;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 768px) {
+  }
+  @media (max-width: 767px) {
+    .navbar {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.7rem;
+    }
+  
+    .help-btn img {
+      width: 11px;
+    }
+    .nav-right {
+      flex-direction: row;
+    }
+    .appointment-btn,
+    .help {
+      width: 50%;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+    }
+    .help button {
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      padding-top: 130px;
+    }
+    .slider {
+      height: auto;
+    }
+    .slide1 img {
+      width: 100%;
+    }
+    .slide1 {
+      padding-left: 10px;
+      & .left {
+        display: block;
+        h1 {
+          font-size: 1.3rem;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+        h2 {
+          font-size: 0.9rem;
+        }
+  
+        button {
+          padding: 10px 25px;
+          font-size: 0.7rem;
+          margin-bottom: 20px;
+        }
+      }
+      .right {
+        img {
+          padding-top: 20px;
+        }
+        width: 100%;
+      }
+    }
+    .slide1 {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+    }
+    .clinic-right {
+      flex-wrap: wrap;
+    }
+    .clinic-section {
+      padding: 36px 34px;
+    }
+    .treatment-grid {
+      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .success-info {
+      padding: 20px 0px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+    }
+    .question-wrapper {
+      padding: 80px 10px;
+    }
+  
+    footer .top {
+      display: flex;
+      gap: 50px;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .middle img {
+      padding-top: 50px;
+      width: 70%;
+    }
+    .brand-logos {
+      flex-direction: column;
+    }
+  
+    .guidance-form {
+      width: 100%;
+    }
+    .guidance-info {
+      width: 100%;
+    }
+    .g-container {
+      flex-direction: column;
+    }
+    .dental-excellence-section {
+      flex-direction: column;
+    }
+    .blog-container {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .doctor-slider-wrapper {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .dental-excellence-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dental-info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: start;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+    .dental-excellence-section {
+      padding: 20px 0;
+    }
+    .doctor-slider-container {
+      align-items: center;
+    }
+    .meet-doctors-btn {
+      padding: 15px 1.8rem;
+      margin-top: 30px;
+    }
+  
+    .question-container {
+      padding: 3px 2px;
+      gap: 2px;
+    }
+    .question-container p {
+      font-size: 12px;
+    }
+    .question-container .plus-icon {
+      font-size: 25px;
+    }
+    .scroll-content .item {
+      padding: 6px 20px;
+    }
+    .scroll-container {
+      margin: 40px 0 1px;
+    }
+    .treatment-section .container {
+      padding: 20px 15px;
+    }
+  
+    .clinic-section {
+      gap: 10px;
+      padding: 36px 4px;
+    }
+    .clinic-left {
+      p {
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 34px;
+      }
+    }
+    .clinic-right {
+      img {
+        width: 44px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      
+      button {
+        padding: 20px 10px;
+        font-size: 14px;
+      }
+    }
+}
